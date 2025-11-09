@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>動画制作料金表</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 1.6em;
+            color: #333;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .section-icon {
+            font-size: 1.8em;
+        }
+
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 0;
+        }
+
+        .pricing-table th {
+            background: #f8f9fa;
+            color: #333;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .pricing-table td {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+            color: #555;
+        }
+
+        .pricing-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .pricing-table tr:hover {
+            background: #f9f9f9;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 1.1em;
+        }
+
+        .indent {
+            padding-left: 40px;
+            color: #777;
+            font-size: 0.95em;
+        }
+
+        .indent .price {
+            color: #e74c3c;
+        }
+
+        .divider {
+            border-top: 2px solid #e0e0e0;
+            margin: 25px 0;
+        }
+
+        .notes-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            margin-bottom: 25px;
+        }
+
+        .notes-title {
+            font-size: 1.3em;
+            color: #333;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .notes-list {
+            list-style: none;
+        }
+
+        .notes-list li {
+            padding: 10px 0;
+            color: #555;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            line-height: 1.5;
+        }
+
+        .notes-list li::before {
+            content: "•";
+            color: #667eea;
+            font-weight: bold;
+            flex-shrink: 0;
+            font-size: 1.2em;
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 15px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 1em;
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .highlight {
+            background: #fff3cd;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+            margin-bottom: 20px;
+        }
+
+        .highlight strong {
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .section {
+                padding: 20px;
+            }
+
+            .pricing-table {
+                font-size: 0.9em;
+            }
+
+            .pricing-table th,
+            .pricing-table td {
+                padding: 10px;
+            }
+
+            .indent {
+                padding-left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎬 動画制作料金表</h1>
+            <p>YouTube・Instagram・TikTok対応</p>
+        </div>
+
+        <!-- 企画・構成 -->
+        <div class="section">
+            <div class="section-title">
+                <span class="section-icon">🧠</span>
+                企画・構成
+            </div>
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>内容</th>
+                        <th>料金（税込）</th>
+                        <th>備考</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>企画構成（参考動画あり）</td>
+                        <td class="price">¥4,000/本</td>
+                        <td>トーン・構成を踏襲して作成</td>
+                    </tr>
+                    <tr>
+                        <td>企画構成（ゼロから制作）</td>
+                        <td class="price">¥5,000/本</td>
+                        <td>ネタ提案・構成・シナリオ含む</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 撮影 -->
+        <div class="section">
+            <div class="section-title">
+                <span class="section-icon">🎥</span>
+                撮影
+            </div>
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>内容</th>
+                        <th>料金（税込）</th>
+                        <th>備考</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>撮影（iPhoneベース）</td>
+                        <td class="price">¥15,000〜/日</td>
+                        <td>機材費込み（照明・スタビ含む簡易セット）</td>
+                    </tr>
+                    <tr>
+                        <td>ロケ地・交通費</td>
+                        <td class="price">実費</td>
+                        <td>必要に応じて別途お見積り</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 編集 -->
+        <div class="section">
+            <div class="section-title">
+                <span class="section-icon">✂️</span>
+                編集
+            </div>
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>種類</th>
+                        <th>料金（税込）</th>
+                        <th>備考</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>🎞️ ショート動画編集<br>（文字入れメイン）</td>
+                        <td class="price">¥3,500/本</td>
+                        <td>参考動画アニメーションなし・文字入れ＋BGM＋素材差し込み可</td>
+                    </tr>
+                    <tr>
+                        <td>縦型編集<br>（Shorts／Reels／TikTok）</td>
+                        <td class="price">¥5,000〜/本</td>
+                        <td>カット・BGM・テロップ・整音含む（簡易演出あり）</td>
+                    </tr>
+                    <tr>
+                        <td>横型編集<br>（YouTube通常動画）</td>
+                        <td class="price">¥10,000〜/本</td>
+                        <td>長尺向け・整音・色調整含む</td>
+                    </tr>
+                    <tr>
+                        <td class="indent">└ ナレーション付き（15分まで）</td>
+                        <td class="price">¥15,000/本</td>
+                        <td>AI音声 or 実ナレーション対応可</td>
+                    </tr>
+                    <tr>
+                        <td class="indent">└ 15分超過料金</td>
+                        <td class="price">+¥1,000/分</td>
+                        <td>長尺ナレーション動画の場合</td>
+                    </tr>
+                    <tr>
+                        <td>モーショングラフィックス追加</td>
+                        <td class="price">+¥5,000</td>
+                        <td>AE演出・アニメーションタイトル等</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- サムネイル制作 -->
+        <div class="section">
+            <div class="section-title">
+                <span class="section-icon">🖼️</span>
+                サムネイル制作
+            </div>
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>内容</th>
+                        <th>料金（税込）</th>
+                        <th>備考</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>静止画サムネイル制作</td>
+                        <td class="price">¥2,000/枚</td>
+                        <td>タイトル・文字デザイン込み</td>
+                    </tr>
+                    <tr>
+                        <td>パターン化・差分対応</td>
+                        <td class="price">¥1,000/枚</td>
+                        <td>色・文言変更などの軽微修正</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 納品・修正 -->
+        <div class="section">
+            <div class="section-title">
+                <span class="section-icon">💾</span>
+                納品・修正
+            </div>
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>内容</th>
+                        <th>料金（税込）</th>
+                        <th>備考</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>納品形式調整<br>（mp4／mov／縦横変換など）</td>
+                        <td class="price">無料</td>
+                        <td>初回納品時対応</td>
+                    </tr>
+                    <tr>
+                        <td>修正対応</td>
+                        <td class="price">2回まで無料</td>
+                        <td>3回目以降 +¥2,000/回</td>
+                    </tr>
+                    <tr>
+                        <td>納期短縮（特急対応）</td>
+                        <td class="price">+¥5,000〜</td>
+                        <td>通常3日→当日／翌日納品など</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 重要な備考 -->
+        <div class="highlight">
+            <strong>💡 重要なお知らせ</strong><br>
+            金額は目安です。内容・納期・ボリュームにより変動します。企画〜撮影〜編集〜納品までワンストップ対応可能です。継続発注・月契約案件は別途ディスカウント対応いたします。
+        </div>
+
+        <!-- 備考 -->
+        <div class="notes-section">
+            <div class="notes-title">
+                <span class="section-icon">💡</span>
+                備考
+            </div>
+            <ul class="notes-list">
+                <li>金額は目安です。内容・納期・ボリュームにより変動します。</li>
+                <li>企画〜撮影〜編集〜納品までワンストップ対応可能。</li>
+                <li>継続発注・月契約案件は別途ディスカウント対応。</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>ご不明な点やお見積りのご依頼は、お気軽にお問い合わせください。</p>
+            <button class="contact-btn">📧 お問い合わせ</button>
+        </div>
+    </div>
+</body>
+</html>
