@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    color: white;
+    margin-bottom: 50px;
+    animation: fadeInDown 0.8s ease;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.header p {
+    font-size: 1.1em;
+    opacity: 0.95;
+}
+
+.section {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    margin-bottom: 25px;
+    animation: fadeInUp 0.6s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+}
+
+.section-title {
+    font-size: 1.6em;
+    color: #333;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #667eea;
+}
+
+.section-icon {
+    font-size: 1.8em;
+}
+
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 0;
+}
+
+.pricing-table th {
+    background: #f8f9fa;
+    color: #333;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 2px solid #667eea;
+}
+
+.pricing-table td {
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    color: #555;
+    transition: background-color 0.3s ease;
+}
+
+.pricing-table tr:last-child td {
+    border-bottom: none;
+}
+
+.pricing-table tbody tr:hover {
+    background: #f9f9f9;
+    cursor: pointer;
+}
+
+.price {
+    font-weight: bold;
+    color: #667eea;
+    font-size: 1.1em;
+}
+
+.indent {
+    padding-left: 40px;
+    color: #777;
+    font-size: 0.95em;
+}
+
+.indent .price {
+    color: #e74c3c;
+}
+
+.highlight {
+    background: #fff3cd;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #ffc107;
+    margin-bottom: 20px;
+    animation: fadeInUp 0.6s ease;
+}
+
+.highlight strong {
+    color: #333;
+}
+
+.notes-section {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    margin-bottom: 25px;
+    animation: fadeInUp 0.6s ease 0.2s both;
+}
+
+.notes-title {
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.notes-list {
+    list-style: none;
+}
+
+.notes-list li {
+    padding: 10px 0;
+    color: #555;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.5;
+}
+
+.notes-list li::before {
+    content: "•";
+    color: #667eea;
+    font-weight: bold;
+    flex-shrink: 0;
+    font-size: 1.2em;
+}
+
+.footer {
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+    font-size: 0.95em;
+    opacity: 0.9;
+}
+
+.contact-btn {
+    display: inline-block;
+    background: white;
+    color: #667eea;
+    padding: 15px 40px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-size: 1em;
+}
+
+.contact-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    background: #f0f0f0;
+}
+
+.contact-btn:active {
+    transform: translateY(0);
+}
+
+/* アニメーション */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* レスポンシブ */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 1.8em;
+    }
+
+    .section {
+        padding: 20px;
+    }
+
+    .pricing-table {
+        font-size: 0.9em;
+    }
+
+    .pricing-table th,
+    .pricing-table td {
+        padding: 10px;
+    }
+
+    .indent {
+        padding-left: 20px;
+    }
+
+    .contact-btn {
+        padding: 12px 30px;
+        font-size: 0.95em;
+    }
+}
